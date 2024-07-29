@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .w400 {
+        width: 400px;
+      }
+      .h400 {
+        height: 400px;
+      }
+      .bg1 {
+        background-image: url(img/n/n2.jpg);
+        background-repeat: no-repeat;
+        /* background-position: right 30px top 50px; */
+        background-size: contain;
+        border: 5px dotted red;
+      }
+      .bg2 {
+        border: 10px dotted red;
+        background-image: url(img/n/n3.jpg);
+        padding: 50px;
+        margin: 50px;
+      }
+      .bg3 {
+        border: 10px dotted red;
+        background-image: url(img/n/n3.jpg);
+        padding: 50px;
+        background-origin: border-box;
+        background-clip: border-box;
+        margin: 50px;
+      }
+      .bg4 {
+        border: 10px dotted red;
+        background-image: url(img/n/n3.jpg);
+        background-clip: content-box;
+        background-origin: content-box;
+        padding: 50px;
+        margin: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg1 w400 h400"></div>
+    <div class="bg2 w400 h400"></div>
+    <div class="bg3 w400 h400"></div>
+    <div class="bg4 w400 h400"></div>
+    <!-- <div class="bg5 w400 h400"></div> -->
+  </body>
+</html>
