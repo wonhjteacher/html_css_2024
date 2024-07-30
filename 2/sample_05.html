@@ -8,7 +8,7 @@
       .wrap {
         display: flex;
         width: 600px;
-        height: 40px;
+        height: 100px;
         background-color: #666;
         margin-top: 50px;
       }
@@ -22,29 +22,115 @@
       .wrap > div:nth-child(3) {
         background-color: blue;
       }
+      .wrap1 > div {
+        width: 100px;
+      }
+      .wrap1 > div:nth-child(1) {
+        flex-grow: 2;
+      }
+      .wrap1 > div:nth-child(2) {
+        flex-grow: 1;
+      }
+      .wrap1 > div:nth-child(3) {
+        flex-grow: 1;
+      }
+      .wrap2 > div {
+        width: 100px;
+      }
+      .wrap2 > div:nth-child(1) {
+        flex-grow: 3;
+      }
+      .wrap2 > div:nth-child(2) {
+        flex-grow: 1;
+      }
+      .wrap2 > div:nth-child(3) {
+        flex-grow: 2;
+      }
+      .wrap3 > div:nth-child(1) {
+        flex-grow: 2;
+      }
+      .wrap3 > div:nth-child(2) {
+        flex-grow: 2;
+      }
+      .wrap3 > div:nth-child(3) {
+        flex-grow: 1;
+      }
+      .wrap4 > div {
+        width: 400px;
+      }
+      .wrap4 > div:nth-child(1) {
+        flex-shrink: 3;
+      }
+      .wrap4 > div:nth-child(2) {
+        flex-shrink: 1;
+      }
+      .wrap4 > div:nth-child(3) {
+        flex-shrink: 1;
+      }
+      .wrap5 > div {
+        width: 300px;
+      }
+      .wrap5 > div:nth-child(1) {
+        flex-shrink: 2;
+      }
+      .wrap5 > div:nth-child(2) {
+        flex-shrink: 1;
+      }
+      .wrap5 > div:nth-child(2) {
+        flex-shrink: 1;
+      }
+      .wrap6 > div {
+        flex-basis: auto;
+        width: 200px;
+      }
     </style>
   </head>
   <body>
-    <!-- div.wrap$*4>div.box*3 -->
-    <div class="wrap1">
+    <!-- div.wrap.wrap$*4>div.box*3 -->
+    <div class="wrap wrap1">
       <div class="box"></div>
+      <!--100+((300/4)*2) =>250-->
       <div class="box"></div>
+      <!--100+((300/4)*1) => 175 -->
       <div class="box"></div>
+      <!--100+((300/4)*1) => 175 -->
     </div>
-    <div class="wrap2">
+    <div class="wrap wrap2">
       <div class="box"></div>
+      <!-- 250 -->
       <div class="box"></div>
+      <!-- 150 -->
       <div class="box"></div>
+      <!-- 200 -->
     </div>
-    <div class="wrap3">
+    <div class="wrap wrap3">
       <div class="box"></div>
+      <!-- 240 -->
       <div class="box"></div>
+      <!-- 240 -->
       <div class="box"></div>
+      <!-- 120 -->
     </div>
-    <div class="wrap4">
+    <div class="wrap wrap4">
       <div class="box"></div>
+      <!-- 400-((600/5)*3) =>40 -->
       <div class="box"></div>
+      <!-- 400-((600/5)*1) =>280 -->
       <div class="box"></div>
+      <!-- 400-((600/5)*1)=>280  -->
+    </div>
+    <div class="wrap wrap5">
+      <div class="box"></div>
+      <!-- 300-((300/4)*2) =>150 -->
+      <div class="box"></div>
+      <!-- 300-((300/4)*1) => 225 -->
+      <div class="box"></div>
+      <!-- 300-((300/4)*1) =>225 -->
+    </div>
+    <div class="wrap wrap6">
+      <div class="box">박스</div>
+      <div class="box">박스 박스</div>
+      <div class="box">박스</div>
     </div>
   </body>
 </html>
