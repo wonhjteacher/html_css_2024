@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .top {
+        height: 80px;
+        background-color: rebeccapurple;
+        width: 100%;
+        margin-bottom: 20px;
+        margin-top: 100px;
+        position: sticky;
+        top: 0;
+      }
+      .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border: 2px solid red;
+      }
+      .inner {
+        display: flex;
+        justify-content: center;
+        height: 300px;
+      }
+      .inner > div {
+        width: 200px;
+        height: 100px;
+        margin: 20px;
+        border: 2px solid red;
+      }
+      footer {
+        height: 2000px; /* vw vh */
+      }
+      .n {
+        position: static;
+        background: orange;
+      }
+      .s {
+        background: pink;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+      .f {
+        position: fixed;
+        background: #8a4baf;
+        top: 200px;
+        right: 0;
+      }
+      .txtbox {
+        font-size: 12px;
+        color: #666;
+        border: none;
+        border-bottom: 1px solid #000;
+      }
+      .txtbox:focus {
+        border: none;
+        outline: none;
+        border-bottom: 4px solid #8a4baf;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top">top</div>
+    <!-- //top -->
+    <div class="container">
+      <div class="inner">
+        <div class="n">static</div>
+        <div class="s">sticky</div>
+        <div class="f">fixed</div>
+      </div>
+      <!-- //inner -->
+    </div>
+    <!-- //conainer -->
+    <footer>푸터</footer>
+    <form action="프로그램연결">
+      <input type="text" placeholder="아이디를 입력하세요" class="txtbox" />
+      <input type="password" />
+      <input type="button" value="클릭" />
+      <input type="reset" value="다시쓰기" />
+      <input type="submit" value="가입하기" />
+
+      <input type="checkbox" name="" id="" /> 독서
+      <input type="checkbox" name="" id="" /> 게임
+      <input type="checkbox" name="" id="" /> 음악
+      <input type="checkbox" name="" id="" /> 쇼핑 <br />
+      <br />
+      <input type="radio" name="gender" />남
+      <input type="radio" name="gender" />여
+
+      <input type="radio" name="info" />이메일 수신
+      <input type="radio" name="info" />sns 수신
+
+      <input type="email" name="" value="" />
+      <input type="search" name="" value="" />
+      <input type="tel" name="" value="" />
+    </form>
+  </body>
+</html>
+
+<!-- 
+ position :  sticky 
+ sticky설정된 top , left ,right ,bottom 최소 하나의 값은 설정 되어 있어야 한다. 
+
+ 설정된 위치 전까지는 static 처럼작동하다 
+ 설정된 위치에 도달하면 fixed 처럼 작동 
+-->
